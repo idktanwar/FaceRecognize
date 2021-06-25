@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		982C8465268652DA00BA737D /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982C8463268652DA00BA737D /* User+CoreDataClass.swift */; };
+		982C8466268652DA00BA737D /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982C8464268652DA00BA737D /* User+CoreDataProperties.swift */; };
+		982C84692686531600BA737D /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982C84682686531600BA737D /* CoreDataHelper.swift */; };
+		982C846C2686536100BA737D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982C846B2686536100BA737D /* User.swift */; };
 		987C127C2686456C0025C44E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987C127B2686456C0025C44E /* AppDelegate.swift */; };
 		987C127E2686456C0025C44E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987C127D2686456C0025C44E /* SceneDelegate.swift */; };
 		987C12802686456C0025C44E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987C127F2686456C0025C44E /* ViewController.swift */; };
@@ -14,9 +18,15 @@
 		987C12862686456C0025C44E /* FaceRecognize.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 987C12842686456C0025C44E /* FaceRecognize.xcdatamodeld */; };
 		987C12882686456D0025C44E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 987C12872686456D0025C44E /* Assets.xcassets */; };
 		987C128B2686456D0025C44E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 987C12892686456D0025C44E /* LaunchScreen.storyboard */; };
+		987C12932686462F0025C44E /* AddNewPeopleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987C12922686462F0025C44E /* AddNewPeopleVC.swift */; };
+		987C129626864B8A0025C44E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987C129526864B8A0025C44E /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		982C8463268652DA00BA737D /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		982C8464268652DA00BA737D /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		982C84682686531600BA737D /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		982C846B2686536100BA737D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		987C12782686456C0025C44E /* FaceRecognize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceRecognize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		987C127B2686456C0025C44E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		987C127D2686456C0025C44E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +36,8 @@
 		987C12872686456D0025C44E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		987C128A2686456D0025C44E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		987C128C2686456D0025C44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		987C12922686462F0025C44E /* AddNewPeopleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPeopleVC.swift; sourceTree = "<group>"; };
+		987C129526864B8A0025C44E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +51,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		982C84612686523C00BA737D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				987C12812686456C0025C44E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		982C8462268652A800BA737D /* CDModel */ = {
+			isa = PBXGroup;
+			children = (
+				982C8463268652DA00BA737D /* User+CoreDataClass.swift */,
+				982C8464268652DA00BA737D /* User+CoreDataProperties.swift */,
+			);
+			path = CDModel;
+			sourceTree = "<group>";
+		};
+		982C84672686530500BA737D /* CoreDateHelper */ = {
+			isa = PBXGroup;
+			children = (
+				982C84682686531600BA737D /* CoreDataHelper.swift */,
+			);
+			path = CoreDateHelper;
+			sourceTree = "<group>";
+		};
+		982C846A2686535800BA737D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				982C846B2686536100BA737D /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		987C126F2686456C0025C44E = {
 			isa = PBXGroup;
 			children = (
@@ -60,14 +105,35 @@
 			children = (
 				987C127B2686456C0025C44E /* AppDelegate.swift */,
 				987C127D2686456C0025C44E /* SceneDelegate.swift */,
-				987C127F2686456C0025C44E /* ViewController.swift */,
-				987C12812686456C0025C44E /* Main.storyboard */,
+				982C846A2686535800BA737D /* Model */,
+				982C84612686523C00BA737D /* View */,
+				987C1294268646340025C44E /* Controller */,
+				982C84672686530500BA737D /* CoreDateHelper */,
+				982C8462268652A800BA737D /* CDModel */,
+				987C129726864B920025C44E /* Utils */,
 				987C12872686456D0025C44E /* Assets.xcassets */,
 				987C12892686456D0025C44E /* LaunchScreen.storyboard */,
 				987C128C2686456D0025C44E /* Info.plist */,
 				987C12842686456C0025C44E /* FaceRecognize.xcdatamodeld */,
 			);
 			path = FaceRecognize;
+			sourceTree = "<group>";
+		};
+		987C1294268646340025C44E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				987C127F2686456C0025C44E /* ViewController.swift */,
+				987C12922686462F0025C44E /* AddNewPeopleVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		987C129726864B920025C44E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				987C129526864B8A0025C44E /* Extension.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +207,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				987C12802686456C0025C44E /* ViewController.swift in Sources */,
+				987C129626864B8A0025C44E /* Extension.swift in Sources */,
+				982C8466268652DA00BA737D /* User+CoreDataProperties.swift in Sources */,
 				987C127C2686456C0025C44E /* AppDelegate.swift in Sources */,
 				987C127E2686456C0025C44E /* SceneDelegate.swift in Sources */,
+				987C12932686462F0025C44E /* AddNewPeopleVC.swift in Sources */,
+				982C84692686531600BA737D /* CoreDataHelper.swift in Sources */,
 				987C12862686456C0025C44E /* FaceRecognize.xcdatamodeld in Sources */,
+				982C846C2686536100BA737D /* User.swift in Sources */,
+				982C8465268652DA00BA737D /* User+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -275,7 +347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
