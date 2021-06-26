@@ -12,27 +12,36 @@ class ViewController: UIViewController {
     //MARK:- Property
     @IBOutlet weak var tblView: UITableView!
     var usersVM = UserViewModel()
+    var searchContoller: UISearchController!
+    var searchText = ""
+    var isSearchApplied = false
     
     //MARK:- Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
+        self.getUserData()
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        getUserData()
     }
     
     //MARK:- Methods
     private func setupUI() {
-        self.navigationController?.navigationBar.prefersLargeTitles = true
      
+        searchContoller =  UISearchController(searchResultsController: nil)
+        navigationItem.searchController = searchContoller
+        searchContoller.searchResultsUpdater = self
+        searchContoller.searchBar.delegate = self
+        
         tblView.delegate = self
         tblView.dataSource = self
         
         tblView.rowHeight = UITableView.automaticDimension
         tblView.estimatedRowHeight = UITableView.automaticDimension
         tblView.tableFooterView = UIView(frame: .zero)
+        
+        
     }
 
     func getUserData() {
@@ -91,8 +100,47 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let viewController = self.storyboard?.instantiateViewController(withIdentifier: "UserDetailVC") as! UserDetailVC
         viewController.user = usersVM.cellForRowAt(indexPath: indexPath)
+        if isSearchApplied {
+            viewController.isSearch = true
+        }
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 
 }
 
+//MARK:- SearchBar Delegate
+
+extension ViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text, searchText.count >= 2 {
+            usersVM.searchUser(withQuery: searchText) {
+                self.isSearchApplied = true
+                self.tblView.dataSource = self
+                self.tblView.reloadData()
+            }
+        }
+    }
+
+}
+
+extension ViewController: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchContoller.isActive = false
+        self.isSearchApplied = false
+        getUserData()
+//        if let searchText = searchBar.text, searchText.count >= 2,!searchText.isEmpty {
+//            self.isSearchApplied = false
+//        }
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchContoller.isActive = false
+        if let searchText = searchBar.text, searchText.count >= 2 {
+            usersVM.searchUser(withQuery: searchText) {
+                self.isSearchApplied = true
+                self.tblView.dataSource = self
+                self.tblView.reloadData()
+            }
+        }
+    }
+}

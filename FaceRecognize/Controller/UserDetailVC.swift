@@ -16,6 +16,7 @@ class UserDetailVC: UIViewController {
     @IBOutlet weak var lblDOB: UILabel!
     @IBOutlet weak var lblMatchFound: UILabel!
     @IBOutlet weak var lblMessage: UILabel!
+    var isSearch = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,7 @@ class UserDetailVC: UIViewController {
         self.lblName.text = username
         self.lblDOB.text = user?.dob
         self.getImageFromPath(imageName: user?.imagePath)
-        
+        self.lblMatchFound.isHidden = !isSearch
         self.imgProfile.layer.cornerRadius = self.imgProfile.frame.height/2
     }
 

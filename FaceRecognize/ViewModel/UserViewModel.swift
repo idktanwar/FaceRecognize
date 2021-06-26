@@ -10,7 +10,8 @@ import Foundation
 class UserViewModel {
     
     private var users = [UserData]()
-
+    var filteredUsers = [UserData]()
+    
     func fetchUserData(completion: @escaping () -> ()) {
         users.removeAll()
         
@@ -26,6 +27,7 @@ class UserViewModel {
                 
                 let userData = UserData(name: name, dob: dob, imagePath: profilePath, phoneNo: phonenum)
                 self.users.append(userData)
+                self.filteredUsers.append(userData)
             }
         }
         completion()
@@ -40,4 +42,22 @@ class UserViewModel {
         return user
     }
     
+    //Search Helper
+    func searchUser(withQuery: String, completion: @escaping () -> ()) {
+        var searchUsers = [UserData]()
+        
+        for user in filteredUsers {
+            if user.name .contains(withQuery) {
+                searchUsers.append(user)
+            }
+        }
+        self.users = searchUsers
+        completion()
+    }
+    
+    //Refresh by search model
+    func refreshSearchData(completion: @escaping () -> ()) {
+        self.users = filteredUsers
+        completion()
+    }
 }
