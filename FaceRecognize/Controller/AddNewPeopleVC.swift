@@ -73,7 +73,7 @@ class AddNewPeopleVC: UIViewController {
         }
         validateDate()
         
-        if txtPhoneno.text?.isEmpty ?? true || !txtPhoneno.text!.isPhoneNumber || txtPhoneno.text!.count == 10  {
+        if txtPhoneno.text?.isEmpty ?? true || !txtPhoneno.text!.isPhoneNumber || !(txtPhoneno.text!.count == 10)  {
             openAlert(title: "Alert", message: "Please enter valid phone number", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
                 print("Okay pressed")
                 return
@@ -109,9 +109,10 @@ class AddNewPeopleVC: UIViewController {
         }
         do {
             print(directory)
-            let path = directory.appendingPathComponent("\(Date().timeIntervalSince1970).jpeg")!
+            let imagename = "\((UUID().uuidString)).jpeg"
+            let path = directory.appendingPathComponent(imagename)!
             try data.write(to: path)
-            return (true, path.absoluteString)
+            return (true, imagename)
         } catch {
             print(error.localizedDescription)
             return (false, "")
@@ -143,10 +144,10 @@ class AddNewPeopleVC: UIViewController {
 extension AddNewPeopleVC: UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
     func openCamera(){
-        if UIImagePickerController.isSourceTypeAvailable(.camera){
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
             let picker = UIImagePickerController()
             picker.delegate = self
-            picker.sourceType = .camera
+            picker.sourceType = .savedPhotosAlbum
             present(picker, animated: true)
         }
     }

@@ -21,21 +21,21 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UserTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserTableViewCell" rowHeight="129" id="xra-10-v2c" customClass="UserTableViewCell" customModule="FaceRecognize" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="129"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UserTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserTableViewCell" rowHeight="170" id="xra-10-v2c" customClass="UserTableViewCell" customModule="FaceRecognize" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xra-10-v2c" id="6Yn-iC-tVx">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="129"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kdx-xl-lIg">
-                                                    <rect key="frame" x="10" y="10" width="150" height="109"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kdx-xl-lIg">
+                                                    <rect key="frame" x="10" y="10" width="150" height="150"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="150" id="1te-p9-nS9"/>
-                                                        <constraint firstAttribute="height" constant="180" id="igB-Hz-4sF"/>
+                                                        <constraint firstAttribute="height" constant="150" id="igB-Hz-4sF"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ip-l5-ayT">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ip-l5-ayT">
                                                     <rect key="frame" x="170" y="10" width="234" height="24"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                     <nil key="textColor"/>
@@ -55,15 +55,16 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="kdx-xl-lIg" secondAttribute="bottom" constant="10" id="1JT-dX-RGX"/>
                                                 <constraint firstItem="7Ip-l5-ayT" firstAttribute="leading" secondItem="kdx-xl-lIg" secondAttribute="trailing" constant="10" id="Gru-YO-gVZ"/>
                                                 <constraint firstItem="zZe-Oo-q7R" firstAttribute="top" secondItem="7Ip-l5-ayT" secondAttribute="bottom" constant="15" id="Itz-9N-fPp"/>
-                                                <constraint firstItem="kdx-xl-lIg" firstAttribute="top" secondItem="6Yn-iC-tVx" secondAttribute="top" constant="10" id="S63-Jv-nIQ"/>
                                                 <constraint firstItem="aE2-Kw-QGj" firstAttribute="trailing" secondItem="7Ip-l5-ayT" secondAttribute="trailing" id="TcV-xE-aSx"/>
                                                 <constraint firstItem="zZe-Oo-q7R" firstAttribute="trailing" secondItem="7Ip-l5-ayT" secondAttribute="trailing" id="V6P-Qr-bI7"/>
+                                                <constraint firstItem="kdx-xl-lIg" firstAttribute="top" secondItem="6Yn-iC-tVx" secondAttribute="top" constant="10" id="Xvl-CP-lD7"/>
                                                 <constraint firstItem="zZe-Oo-q7R" firstAttribute="leading" secondItem="7Ip-l5-ayT" secondAttribute="leading" id="Z1U-rb-sOA"/>
+                                                <constraint firstAttribute="bottom" secondItem="kdx-xl-lIg" secondAttribute="bottom" constant="10" id="bM3-sE-Cec"/>
                                                 <constraint firstItem="aE2-Kw-QGj" firstAttribute="top" secondItem="zZe-Oo-q7R" secondAttribute="bottom" constant="15" id="bPN-pa-HaY"/>
                                                 <constraint firstItem="7Ip-l5-ayT" firstAttribute="top" secondItem="kdx-xl-lIg" secondAttribute="top" id="h0L-na-ggl"/>
+                                                <constraint firstItem="kdx-xl-lIg" firstAttribute="centerY" secondItem="6Yn-iC-tVx" secondAttribute="centerY" id="imJ-mU-m8f"/>
                                                 <constraint firstAttribute="trailing" secondItem="7Ip-l5-ayT" secondAttribute="trailing" constant="10" id="ocV-wL-nhN"/>
                                                 <constraint firstItem="kdx-xl-lIg" firstAttribute="leading" secondItem="6Yn-iC-tVx" secondAttribute="leading" constant="10" id="peE-UG-UUH"/>
                                                 <constraint firstItem="aE2-Kw-QGj" firstAttribute="leading" secondItem="7Ip-l5-ayT" secondAttribute="leading" id="qep-ly-Uqa"/>
@@ -168,7 +169,7 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cMb-Zp-GzF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cMb-Zp-GzF">
                                 <rect key="frame" x="130" y="65" width="152" height="150.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="FiN-IC-s61"/>

@@ -18,6 +18,9 @@ class UserTableViewCell: UITableViewCell {
     //MARK:- lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
+        self.imgProfile.layer.cornerRadius = imgProfile.frame.height/2
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,11 +33,20 @@ class UserTableViewCell: UITableViewCell {
         self.lblDOB.text = user.dob
         self.lblPhoneNo.text = user.phoneNo
         
-        self.getImageFromPath(path: user.imagePath)
+        self.getImageFromPath(imageName: user.imagePath)
     }
     
-    private func getImageFromPath(path: String){
-        let imageFromPath = UIImage(contentsOfFile: path)
-        self.imgProfile.image = imageFromPath
+    private func getImageFromPath(imageName: String){
+
+        let fileManager = FileManager.default
+        let documentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let fileurl = (documentDirectory.appendingPathComponent(imageName))
+
+        if fileManager.fileExists(atPath: documentDirectory.path){
+            self.imgProfile.image = UIImage(contentsOfFile: fileurl.path)
+        }else{
+            print("No Image")
+        }
     }
+    
 }
