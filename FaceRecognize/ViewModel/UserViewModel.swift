@@ -14,12 +14,11 @@ class UserViewModel {
     
     func fetchUserData(completion: @escaping () -> ()) {
         users.removeAll()
+        filteredUsers.removeAll()
         
         let users = User.fetchUsersLists()
-        
         if let users = users {
             for user in users {
-                
                 guard let name = user.name else {continue}
                 guard let dob =  user.dob else {continue}
                 guard let phonenum  = user.phoneNumber else {continue}

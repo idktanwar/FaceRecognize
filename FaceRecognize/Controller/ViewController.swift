@@ -42,8 +42,6 @@ class ViewController: UIViewController {
         tblView.rowHeight = UITableView.automaticDimension
         tblView.estimatedRowHeight = UITableView.automaticDimension
         tblView.tableFooterView = UIView(frame: .zero)
-        
-        
     }
 
     func getUserData() {
