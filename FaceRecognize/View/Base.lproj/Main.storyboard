@@ -104,6 +104,79 @@
             </objects>
             <point key="canvasLocation" x="1034.7826086956522" y="113.83928571428571"/>
         </scene>
+        <!--User DetailVC-->
+        <scene sceneID="tKK-S5-VjC">
+            <objects>
+                <viewController storyboardIdentifier="UserDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="onK-JE-cj0" customClass="UserDetailVC" customModule="FaceRecognize" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="euR-m7-IsK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DAr-dt-s1S">
+                                <rect key="frame" x="57" y="110" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="m3f-V0-b2B"/>
+                                    <constraint firstAttribute="height" constant="300" id="xmm-4F-sRa"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0C-KW-KyD">
+                                <rect key="frame" x="57" y="430" width="300" height="29"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7W-qw-4J0">
+                                <rect key="frame" x="57" y="479" width="300" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Match Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFs-vh-LeM">
+                                <rect key="frame" x="57" y="543" width="300" height="36"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htM-49-74W">
+                                <rect key="frame" x="10" y="44" width="394" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wUN-tE-cRk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wUN-tE-cRk" firstAttribute="trailing" secondItem="htM-49-74W" secondAttribute="trailing" constant="10" id="2km-2e-rUY"/>
+                            <constraint firstItem="DAr-dt-s1S" firstAttribute="centerX" secondItem="euR-m7-IsK" secondAttribute="centerX" id="9u2-7Q-t1g"/>
+                            <constraint firstItem="W7W-qw-4J0" firstAttribute="trailing" secondItem="DAr-dt-s1S" secondAttribute="trailing" id="Kue-v3-8CK"/>
+                            <constraint firstItem="J0C-KW-KyD" firstAttribute="leading" secondItem="DAr-dt-s1S" secondAttribute="leading" id="Nok-Rf-6OH"/>
+                            <constraint firstItem="vFs-vh-LeM" firstAttribute="leading" secondItem="DAr-dt-s1S" secondAttribute="leading" id="Xs1-NQ-wDA"/>
+                            <constraint firstItem="J0C-KW-KyD" firstAttribute="trailing" secondItem="DAr-dt-s1S" secondAttribute="trailing" id="Z5h-d2-X7X"/>
+                            <constraint firstItem="htM-49-74W" firstAttribute="top" secondItem="wUN-tE-cRk" secondAttribute="top" id="fUw-DX-oe6"/>
+                            <constraint firstItem="J0C-KW-KyD" firstAttribute="top" secondItem="DAr-dt-s1S" secondAttribute="bottom" constant="20" id="fwn-V9-o95"/>
+                            <constraint firstItem="DAr-dt-s1S" firstAttribute="centerX" secondItem="euR-m7-IsK" secondAttribute="centerX" id="hzA-z1-2Zk"/>
+                            <constraint firstItem="DAr-dt-s1S" firstAttribute="top" secondItem="htM-49-74W" secondAttribute="bottom" constant="30" id="kpr-4p-E4K"/>
+                            <constraint firstItem="htM-49-74W" firstAttribute="leading" secondItem="wUN-tE-cRk" secondAttribute="leading" constant="10" id="lmu-Xi-g4u"/>
+                            <constraint firstItem="W7W-qw-4J0" firstAttribute="leading" secondItem="DAr-dt-s1S" secondAttribute="leading" id="mmG-5d-67m"/>
+                            <constraint firstItem="vFs-vh-LeM" firstAttribute="trailing" secondItem="DAr-dt-s1S" secondAttribute="trailing" id="sFh-WB-fly"/>
+                            <constraint firstItem="vFs-vh-LeM" firstAttribute="top" secondItem="W7W-qw-4J0" secondAttribute="bottom" constant="40" id="uNx-Ak-pMn"/>
+                            <constraint firstItem="W7W-qw-4J0" firstAttribute="top" secondItem="J0C-KW-KyD" secondAttribute="bottom" constant="20" id="zVQ-Op-RKf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgProfile" destination="DAr-dt-s1S" id="i3B-3f-Aou"/>
+                        <outlet property="lblDOB" destination="W7W-qw-4J0" id="EeI-wG-Gml"/>
+                        <outlet property="lblMatchFound" destination="vFs-vh-LeM" id="Df6-8Z-I0T"/>
+                        <outlet property="lblMessage" destination="htM-49-74W" id="SOh-GD-dgL"/>
+                        <outlet property="lblName" destination="J0C-KW-KyD" id="fSA-cS-QeL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iyg-Fp-B7I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026.0869565217392" y="850.44642857142856"/>
+        </scene>
         <!--Add New PeopleVC-->
         <scene sceneID="z8X-eH-wur">
             <objects>
@@ -228,6 +301,12 @@
         <image name="plus.app" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
