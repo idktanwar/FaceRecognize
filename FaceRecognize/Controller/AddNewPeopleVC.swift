@@ -32,12 +32,13 @@ class AddNewPeopleVC: UIViewController {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         imgProfile.addGestureRecognizer(tapGesture)
-        
+        imgProfile.isUserInteractionEnabled = true
         imgProfile.layer.cornerRadius = imgProfile.frame.height/2
-        imgProfile.layer.borderWidth = 0.5
+        imgProfile.layer.borderWidth = 0.23
         imgProfile.layer.backgroundColor = UIColor.white.cgColor
+        
+        txtPhoneno.keyboardType = .numberPad
     }
-    
     
     //MARK:- Selector
     
@@ -67,14 +68,12 @@ class AddNewPeopleVC: UIViewController {
         }
         
         if txtDOB.text?.isEmpty ?? true {
-            openAlert(title: "Alert", message: "Please enter valid DOB", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
-                print("Okay pressed")
-                return
-            }])
+            showInvalidDateAlert()
             return
         }
+        validateDate()
         
-        if txtPhoneno.text?.isEmpty ?? true {
+        if txtPhoneno.text?.isEmpty ?? true || !txtPhoneno.text!.isPhoneNumber || txtPhoneno.text!.count == 10  {
             openAlert(title: "Alert", message: "Please enter valid phone number", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
                 print("Okay pressed")
                 return
@@ -119,18 +118,35 @@ class AddNewPeopleVC: UIViewController {
         }
     }
     
-}
+    func validateDate(){
+        let dateString = txtDOB.text!
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy/"
 
+        if dateFormatter.date(from: dateString) != nil {
+            print("date is valid")
+        } else {
+            showInvalidDateAlert()
+        }
+    }
+    
+    func showInvalidDateAlert(){
+        openAlert(title: "Alert", message: "Please enter valid DOB", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
+            print("Okay pressed")
+            return
+        }])
+    }
+}
 
 //MARK:- ImagePickerController
 
 extension AddNewPeopleVC: UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
     func openCamera(){
-        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
             let picker = UIImagePickerController()
             picker.delegate = self
-            picker.sourceType = .savedPhotosAlbum
+            picker.sourceType = .camera
             present(picker, animated: true)
         }
     }

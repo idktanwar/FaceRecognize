@@ -37,7 +37,21 @@ public class User: NSManagedObject {
             print("❌ Failed to add new user: \(error.localizedDescription)")
             return false
         }
-        
+    }
+    
+    //get the list of items
+    class func fetchUsersLists() -> [User]? {
+        let context = CoreDataManager.sharedInstance.persistentContainer.viewContext
+
+        let fetchRequest = User.getFetchRequest()
+        do {
+            let users = try context.fetch(fetchRequest)
+            return users
+            
+        } catch let fetchErr {
+            print("❌ Failed to fetch:",fetchErr)
+            return nil
+        }
     }
     
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,8 @@
 		982C8466268652DA00BA737D /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982C8464268652DA00BA737D /* User+CoreDataProperties.swift */; };
 		982C84692686531600BA737D /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982C84682686531600BA737D /* CoreDataHelper.swift */; };
 		982C846C2686536100BA737D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982C846B2686536100BA737D /* User.swift */; };
+		982CF5C02686ED2C009F414E /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CF5BF2686ED2C009F414E /* UserViewModel.swift */; };
+		982CF5C32686EF8D009F414E /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CF5C22686EF8D009F414E /* UserTableViewCell.swift */; };
 		987C127C2686456C0025C44E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987C127B2686456C0025C44E /* AppDelegate.swift */; };
 		987C127E2686456C0025C44E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987C127D2686456C0025C44E /* SceneDelegate.swift */; };
 		987C12802686456C0025C44E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987C127F2686456C0025C44E /* ViewController.swift */; };
@@ -29,6 +31,8 @@
 		982C8464268652DA00BA737D /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		982C84682686531600BA737D /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		982C846B2686536100BA737D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		982CF5BF2686ED2C009F414E /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		982CF5C22686EF8D009F414E /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		987C12782686456C0025C44E /* FaceRecognize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceRecognize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		987C127B2686456C0025C44E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		987C127D2686456C0025C44E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		982CF5BE2686ED12009F414E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				982CF5BF2686ED2C009F414E /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		982CF5C12686EF74009F414E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				982CF5C22686EF8D009F414E /* UserTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		987C126F2686456C0025C44E = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +141,10 @@
 				987C127B2686456C0025C44E /* AppDelegate.swift */,
 				987C127D2686456C0025C44E /* SceneDelegate.swift */,
 				982C846A2686535800BA737D /* Model */,
+				982CF5BE2686ED12009F414E /* ViewModel */,
 				982C84612686523C00BA737D /* View */,
 				987C1294268646340025C44E /* Controller */,
+				982CF5C12686EF74009F414E /* Cells */,
 				982C84672686530500BA737D /* CoreDateHelper */,
 				982C8462268652A800BA737D /* CDModel */,
 				987C129726864B920025C44E /* Utils */,
@@ -157,7 +179,6 @@
 				C19349C1948CC146ED836A5D /* Pods-FaceRecognize.debug.xcconfig */,
 				69F967FCDC75F9627BD4500D /* Pods-FaceRecognize.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -276,8 +297,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				987C12802686456C0025C44E /* ViewController.swift in Sources */,
+				982CF5C02686ED2C009F414E /* UserViewModel.swift in Sources */,
 				987C129626864B8A0025C44E /* Extension.swift in Sources */,
 				982C8466268652DA00BA737D /* User+CoreDataProperties.swift in Sources */,
+				982CF5C32686EF8D009F414E /* UserTableViewCell.swift in Sources */,
 				987C127C2686456C0025C44E /* AppDelegate.swift in Sources */,
 				987C127E2686456C0025C44E /* SceneDelegate.swift in Sources */,
 				987C12932686462F0025C44E /* AddNewPeopleVC.swift in Sources */,
@@ -432,14 +455,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 9PF8CVL2XE;
 				INFOPLIST_FILE = FaceRecognize/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dtanwar.FaceRecognize;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eemphasys.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Debug Development";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -451,14 +477,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 9PF8CVL2XE;
 				INFOPLIST_FILE = FaceRecognize/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dtanwar.FaceRecognize;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eemphasys.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Debug Development";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
