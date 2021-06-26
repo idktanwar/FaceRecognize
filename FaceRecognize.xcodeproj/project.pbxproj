@@ -14,9 +14,10 @@
 		982CF5C02686ED2C009F414E /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CF5BF2686ED2C009F414E /* UserViewModel.swift */; };
 		982CF5C32686EF8D009F414E /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CF5C22686EF8D009F414E /* UserTableViewCell.swift */; };
 		982CF5C526870CDF009F414E /* UserDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CF5C426870CDF009F414E /* UserDetailVC.swift */; };
-		982CF5CA26871F58009F414E /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-06-26 at 14.08.58.png in Resources */ = {isa = PBXBuildFile; fileRef = 982CF5C726871F58009F414E /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-06-26 at 14.08.58.png */; };
-		982CF5CB26871F58009F414E /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-06-26 at 14.08.22.png in Resources */ = {isa = PBXBuildFile; fileRef = 982CF5C826871F58009F414E /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-06-26 at 14.08.22.png */; };
-		982CF5CC26871F58009F414E /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-06-26 at 14.07.06.png in Resources */ = {isa = PBXBuildFile; fileRef = 982CF5C926871F58009F414E /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-06-26 at 14.07.06.png */; };
+		982CF5CA26871F58009F414E /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = 982CF5C726871F58009F414E /* img1.png */; };
+		982CF5CB26871F58009F414E /* img3.png in Resources */ = {isa = PBXBuildFile; fileRef = 982CF5C826871F58009F414E /* img3.png */; };
+		982CF5CC26871F58009F414E /* img4.png in Resources */ = {isa = PBXBuildFile; fileRef = 982CF5C926871F58009F414E /* img4.png */; };
+		982CF5CE26872152009F414E /* img2.png in Resources */ = {isa = PBXBuildFile; fileRef = 982CF5CD26872152009F414E /* img2.png */; };
 		987C127C2686456C0025C44E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987C127B2686456C0025C44E /* AppDelegate.swift */; };
 		987C127E2686456C0025C44E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987C127D2686456C0025C44E /* SceneDelegate.swift */; };
 		987C12802686456C0025C44E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987C127F2686456C0025C44E /* ViewController.swift */; };
@@ -38,9 +39,10 @@
 		982CF5BF2686ED2C009F414E /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		982CF5C22686EF8D009F414E /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		982CF5C426870CDF009F414E /* UserDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailVC.swift; sourceTree = "<group>"; };
-		982CF5C726871F58009F414E /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-06-26 at 14.08.58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 12 Pro Max - 2021-06-26 at 14.08.58.png"; sourceTree = "<group>"; };
-		982CF5C826871F58009F414E /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-06-26 at 14.08.22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 12 Pro Max - 2021-06-26 at 14.08.22.png"; sourceTree = "<group>"; };
-		982CF5C926871F58009F414E /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-06-26 at 14.07.06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 12 Pro Max - 2021-06-26 at 14.07.06.png"; sourceTree = "<group>"; };
+		982CF5C726871F58009F414E /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img1.png; sourceTree = "<group>"; };
+		982CF5C826871F58009F414E /* img3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img3.png; sourceTree = "<group>"; };
+		982CF5C926871F58009F414E /* img4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img4.png; sourceTree = "<group>"; };
+		982CF5CD26872152009F414E /* img2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img2.png; sourceTree = "<group>"; };
 		987C12782686456C0025C44E /* FaceRecognize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceRecognize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		987C127B2686456C0025C44E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		987C127D2686456C0025C44E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,9 +130,10 @@
 		982CF5C626871F2F009F414E /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
-				982CF5C926871F58009F414E /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-06-26 at 14.07.06.png */,
-				982CF5C826871F58009F414E /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-06-26 at 14.08.22.png */,
-				982CF5C726871F58009F414E /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-06-26 at 14.08.58.png */,
+				982CF5C926871F58009F414E /* img4.png */,
+				982CF5C826871F58009F414E /* img3.png */,
+				982CF5C726871F58009F414E /* img1.png */,
+				982CF5CD26872152009F414E /* img2.png */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
@@ -261,11 +264,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				982CF5CC26871F58009F414E /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-06-26 at 14.07.06.png in Resources */,
+				982CF5CE26872152009F414E /* img2.png in Resources */,
+				982CF5CC26871F58009F414E /* img4.png in Resources */,
 				987C128B2686456D0025C44E /* LaunchScreen.storyboard in Resources */,
-				982CF5CB26871F58009F414E /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-06-26 at 14.08.22.png in Resources */,
+				982CF5CB26871F58009F414E /* img3.png in Resources */,
 				987C12882686456D0025C44E /* Assets.xcassets in Resources */,
-				982CF5CA26871F58009F414E /* Simulator Screen Shot - iPhone 12 Pro Max - 2021-06-26 at 14.08.58.png in Resources */,
+				982CF5CA26871F58009F414E /* img1.png in Resources */,
 				987C12832686456C0025C44E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
