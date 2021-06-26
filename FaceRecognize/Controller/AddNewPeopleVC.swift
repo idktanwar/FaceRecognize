@@ -13,12 +13,16 @@ protocol NewPeopleAddedDelegate: AnyObject {
 
 class AddNewPeopleVC: UIViewController {
 
+    //MARK:- Property
+    
     @IBOutlet weak var imgProfile: UIImageView!
     weak var delegate: NewPeopleAddedDelegate?
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtDOB: UITextField!
     @IBOutlet weak var txtPhoneno: UITextField!
     var imageSelected = false
+    
+    //MARK:- Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,6 +102,8 @@ class AddNewPeopleVC: UIViewController {
     func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
         self.openCamera()
     }
+    
+    //MARK:- Helper Method
     
     //Save image to documment directory
     private func saveImage(image: UIImage) -> (Bool, String) {

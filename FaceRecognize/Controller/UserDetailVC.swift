@@ -18,6 +18,7 @@ class UserDetailVC: UIViewController {
     @IBOutlet weak var lblMessage: UILabel!
     var isSearch = false
     
+    //MARK:- Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()

@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var isSearchApplied = false
     
     //MARK:- Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
     }
     
     //MARK:- Methods
+    
     private func setupUI() {
      
         searchContoller =  UISearchController(searchResultsController: nil)
@@ -128,9 +130,6 @@ extension ViewController: UISearchBarDelegate {
         searchContoller.isActive = false
         self.isSearchApplied = false
         getUserData()
-//        if let searchText = searchBar.text, searchText.count >= 2,!searchText.isEmpty {
-//            self.isSearchApplied = false
-//        }
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
